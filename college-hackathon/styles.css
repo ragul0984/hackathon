@@ -494,7 +494,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: 5.5rem;
+    font-size: clamp(2.2rem, 10vw, 5.5rem);
     font-weight: 900;
     letter-spacing: 4px;
     line-height: 1;
@@ -505,10 +505,11 @@ body::-webkit-scrollbar-thumb {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 4px 14px rgba(14, 165, 233, 0.15));
     animation: pulse-glow 6s infinite;
+    white-space: nowrap;
 }
 
 .hero-title span {
-    font-size: 3.5rem;
+    font-size: clamp(1.4rem, 6.5vw, 3.5rem);
     color: var(--primary);
     vertical-align: super;
 }
@@ -538,8 +539,6 @@ body::-webkit-scrollbar-thumb {
 .hero-subtitle::after { right: -60px; }
 
 @media (max-width: 768px) {
-    .hero-title { font-size: 3.5rem; }
-    .hero-title span { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; letter-spacing: 3px; }
     .hero-subtitle::before { left: -45px; width: 25px; }
     .hero-subtitle::after { right: -45px; width: 25px; }
