@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TECHNOVA'26 - National Level Hackathon on 'Technology for Sustainable Society: Frugal Innovations for a Better Future' at Dhanalakshmi Srinivasan Engineering College (Autonomous), Perambalur. Cash prizes worth ₹30,000.">
+    <meta name="keywords" content="Technova 2026, Dhanalakshmi Srinivasan Engineering College, DSEC Hackathon, National Level Hackathon, Sustainable Society, Frugal Innovations, IT Department Hackathon">
+    <title>TECHNOVA'26 | National Level Hackathon | DSEC IT</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas Particle Background -->
+    <canvas id="circuit-bg"></canvas>
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">TECH</span>NOVA<span>'26</span>
+            </a>
+            <nav id="navbar">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#theme-section" class="nav-link">Theme</a>
+                <a href="#timeline" class="nav-link">Timeline</a>
+                <a href="#prizes" class="nav-link">Prizes</a>
+                <a href="#coordinators" class="nav-link">Team</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwLFcOJfhlh0Z6ikqLN6hXZ-vbBFDJuy0VbVoMIFMdD4Kn_Q/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary btn-glow" id="nav-register-btn">Register Now</a>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#theme-section" class="mobile-link">Theme</a>
+        <a href="#timeline" class="mobile-link">Timeline</a>
+        <a href="#prizes" class="mobile-link">Prizes</a>
+        <a href="#coordinators" class="mobile-link">Team</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwLFcOJfhlh0Z6ikqLN6hXZ-vbBFDJuy0VbVoMIFMdD4Kn_Q/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary btn-glow mobile-reg-btn" id="mobile-register-btn">Register Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <svg class="badge-icon" viewBox="0 0 24 24" width="16" height="16">
+                    <path fill="currentColor" d="M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6zm-1 6v3h2v-3h-2zm0-4v2h2V8h-2z"/>
+                </svg>
+                <span>Department of Information Technology</span>
+            </div>
+            
+            <p class="college-info">DHANALAKSHMI SRINIVASAN ENGINEERING COLLEGE (AUTONOMOUS)</p>
+            <p class="college-meta">Affiliated to Anna University | Accredited 'A' Grade by NAAC | NBA Accredited Departments</p>
+
+            <h1 class="hero-title">TECHNOVA<span>'26</span></h1>
+            <p class="hero-subtitle">NATIONAL LEVEL HACKATHON</p>
+
+            <div class="theme-box">
+                <span class="theme-label">THEME</span>
+                <h3 class="theme-title">Technology for Sustainable Society: Frugal Innovations for a Better Future</h3>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-wrapper">
+                <p class="countdown-header">SUBMISSION DEADLINE COUNTDOWN</p>
+                <div id="countdown" class="countdown-grid">
+                    <div class="countdown-item">
+                        <span class="number" id="days">00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="hours">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="minutes">00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="seconds">00</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwLFcOJfhlh0Z6ikqLN6hXZ-vbBFDJuy0VbVoMIFMdD4Kn_Q/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn btn-primary btn-large btn-glow" id="hero-register-btn">Register Team</a>
+                <a href="#theme-section" class="btn btn-secondary btn-large" id="hero-explore-btn">Explore Theme</a>
+            </div>
+
+            <div class="hero-quick-details">
+                <div class="qd-item">
+                    <svg class="qd-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>24 Hours Non-Stop</span>
+                </div>
+                <div class="qd-item">
+                    <svg class="qd-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                    </svg>
+                    <span>Aug 20 & 21, 2026</span>
+                </div>
+                <div class="qd-item">
+                    <svg class="qd-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                    </svg>
+                    <span>Reg Fee: ₹400 / Participant *</span>
+                </div>
+            </div>
+            <p class="fee-disclaimer">* Registration fee is payable strictly ONLY AFTER your team's project idea is selected.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">About The Event</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="grid grid-2about scroll-animate">
+                <div class="about-text">
+                    <p class="lead">TECHNOVA'26 is a premium National Level Hackathon organized by the Department of Information Technology at Dhanalakshmi Srinivasan Engineering College (Autonomous), Perambalur.</p>
+                    <p>Designed to be a crucible for bright minds across the nation, this 24-hour non-stop hackathon provides a platform for engineering students to design and build technology-driven, frugal innovations that solve critical challenges for a sustainable society.</p>
+                    <p>We invite innovators, code wizards, and problem solvers to build scalable, low-cost prototypes that will drive our planet toward a greener, smarter, and more equitable future.</p>
+                    
+                    <div class="about-key-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">₹30,000</span>
+                            <span class="stat-lbl">Cash Prize Pool</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">24H</span>
+                            <span class="stat-lbl">Non-Stop Coding</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">4</span>
+                            <span class="stat-lbl">Max Team Size</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box gold">
+                            <svg class="h-icon" viewBox="0 0 24 24" width="28" height="28">
+                                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                            </svg>
+                        </div>
+                        <h3>Cash Prizes & Glory</h3>
+                        <p>Total cash rewards worth ₹30,000 for top performing teams, along with winner trophies and credentials.</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box blue">
+                            <svg class="h-icon" viewBox="0 0 24 24" width="28" height="28">
+                                <path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.89 12.5L12 15.82l6.11-3.32L12 18.04l-6.11-5.54z"/>
+                            </svg>
+                        </div>
+                        <h3>Certificates & Credits</h3>
+                        <p>All shortlisted participants receive National Level Participation Certificates to boost their portfolios.</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box purple">
+                            <svg class="h-icon" viewBox="0 0 24 24" width="28" height="28">
+                                <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <h3>Industry Exposure</h3>
+                        <p>Interact with tech leaders, industry mentors, and engineering experts assessing your innovative ideas.</p>
+                    </div>
+
+                    <div class="highlight-card">
+                        <div class="highlight-icon-box cyan">
+                            <svg class="h-icon" viewBox="0 0 24 24" width="28" height="28">
+                                <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Networking Opportunities</h3>
+                        <p>Connect with fellow coders from campuses nationwide, building networks that last a lifetime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Scope Section (Replaces Tracks) -->
+    <section id="theme-section" class="section-padding section-bg">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">Hackathon Format: Open Innovation</h2>
+                <p class="section-subtitle">A unified open challenge based on the central theme of sustainability</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="open-innovation-content scroll-animate">
+                <div class="oi-card-main">
+                    <div class="oi-header">
+                        <svg viewBox="0 0 24 24" width="48" height="48" class="oi-icon">
+                            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm3.07-5.07l-.9.92C14.45 13.9 14 14.5 14 16h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                        </svg>
+                        <div class="oi-title-block">
+                            <span class="oi-badge">Open Innovation Format</span>
+                            <h3>Design Your Own Frugal Solution</h3>
+                        </div>
+                    </div>
+                    <p class="oi-desc">TECHNOVA'26 operates under an <strong>Open Innovation</strong> model. We do not restrict you to predefined sub-categories. Instead, your team is invited to identify any real-world challenge related to environmental, agricultural, civic, or healthcare sustainability, and construct a frugal (low-cost, high-efficiency) hardware or software solution for it.</p>
+                </div>
+
+                <h3 class="suggested-heading">Suggested Domains of Focus</h3>
+                <div class="grid grid-3">
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M17 8C14.24 8 12 10.24 12 13C12 14.1 12.36 15.12 12.97 15.95L12 16.92L11.03 15.95C11.64 15.12 12 14.1 12 13C12 10.24 9.76 8 7 8C4.24 8 2 10.24 2 13C2 17.58 12 22 12 22S22 17.58 22 13C22 10.24 19.76 8 17 8zM7 16C5.34 16 4 14.66 4 13C4 11.34 5.34 10 7 10C8.66 10 10 11.34 10 13C10 14.66 8.66 16 7 16zM17 16C15.34 16 14 14.66 14 13C14 11.34 15.34 10 17 10C18.66 10 20 11.34 20 13C20 14.66 18.66 16 17 16z"/></svg>
+                            <h4>AgriTech & Food Security</h4>
+                        </div>
+                        <p>Soil health sensors, irrigation automation, cold storage, and crop monitoring tools designed for budget-conscious farmers.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2c-5.33 4.55-8 8.47-8 11.74 0 4.96 3.59 8.26 8 8.26s8-3.3 8-8.26C20 10.47 17.33 6.55 12 2zm0 18c-3.3 0-6-2.5-6-5.88 0-2.48 2.05-5.69 6-9.15 3.95 3.46 6 6.67 6 9.15 0 3.38-2.7 5.88-6 5.88z"/></svg>
+                            <h4>Clean Water & Sanitation</h4>
+                        </div>
+                        <p>Low-cost filters, distribution leak checkers, greywater recycling tracking, and rural hygiene monitoring tools.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h6V3h-8z"/></svg>
+                            <h4>Affordable Clean Energy</h4>
+                        </div>
+                        <p>Solar utilization adjusters, kinetic generators, power saving controllers, and local grids for off-grid houses.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"/></svg>
+                            <h4>Smart Waste Management</h4>
+                        </div>
+                        <p>Frugal trash sorters, organic decay timers, plastic usage monitors, and community sorting systems.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            <h4>Healthcare & Assistive Tech</h4>
+                        </div>
+                        <p>Low-cost diagnostic apparatus, wearable sensors, elderly fall notifications, and smart walking aids.</p>
+                    </div>
+
+                    <div class="scope-box">
+                        <div class="scope-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm3.07-5.07l-.9.92C14.45 13.9 14 14.5 14 16h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                            <h4>Other Frugal Tech Solutions</h4>
+                        </div>
+                        <p>Any software web app, mobile app, or IoT prototype that solves a burning sustainable/societal issue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">Timeline & Schedule</h2>
+                <p class="section-subtitle">Roadmap of TECHNOVA'26 from submission to pitch day</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="timeline-container scroll-animate">
+                <div class="timeline-line"></div>
+                
+                <!-- Step 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 11, 2026</div>
+                        <h3>Idea PPT Submission Deadline</h3>
+                        <p>Submit your team registration details and ideation PowerPoint slides (PPT) outlining the problem statement, frugal hardware/software architecture, and expected impact.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 14, 2026</div>
+                        <h3>Selection Announcement</h3>
+                        <p>Idea submissions will be evaluated by an expert panel. Top teams will be notified via email for the physical round. Selection criteria includes frugality, impact, and feasibility.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 20, 2026 (08:30 AM)</div>
+                        <h3>Hackathon Inauguration & Coding Start</h3>
+                        <p>Reporting at the DSEC IT department lab. Welcome address, mentor assignments, and release of final instructions. Code/Build starts at 9:30 AM sharp.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 20, 2026 (09:00 PM)</div>
+                        <h3>Midnight Mentor Review</h3>
+                        <p>Experts and professors review progress of the running prototype. Direction adjustments, architectural optimizations, and troubleshooting support.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 21, 2026 (08:30 AM)</div>
+                        <h3>Code Freeze & Pre-Evaluation</h3>
+                        <p>24-hour coding window shuts. Teams must stop development and upload codebase/design documents. Initial validation checks begin.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 21, 2026 (11:00 AM)</div>
+                        <h3>Final Jury Presentation</h3>
+                        <p>Teams showcase running prototypes to the external judging panel. Standard format: 5 minutes demo + 3 minutes Q&A. Focus on sustainable feasibility.</p>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="time-stamp">AUG 21, 2026 (03:00 PM)</div>
+                        <h3>Valedictory & Prize Distribution</h3>
+                        <p>Announcement of winners. Awarding cash prizes from the unified prize pool, trophies, and distribution of participation certificates to all attending teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section (Unified Pool details, no breakdown) -->
+    <section id="prizes" class="section-padding section-bg">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">Prizes & Perks</h2>
+                <p class="section-subtitle">Big rewards for sustainable breakthroughs</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="prize-unified-wrapper scroll-animate">
+                <div class="prize-card unified-prize-card">
+                    <div class="prize-glow"></div>
+                    <div class="trophy-wrapper">
+                        <svg class="trophy-icon" viewBox="0 0 24 24" width="100" height="100">
+                            <path fill="currentColor" d="M18 2H6v3c0 2.21 1.79 4 4 4v2c-2.94 0-5.46 2.11-5.9 5H3v2h6v3h6v-3h6v-2h-1.1c-.44-2.89-2.96-5-5.9-5V9c2.21 0 4-1.79 4-4V2zm-4 7h-4V4h4v5z"/>
+                        </svg>
+                    </div>
+                    <h3>Unified Cash Prize Pool</h3>
+                    <p class="prize-amount">₹30,000</p>
+                    <p class="prize-desc-text">Awarded to the top teams demonstrating the most innovative, frugal, and impactful sustainable technological solutions.</p>
+                    
+                    <div class="prize-perks-container">
+                        <div class="perk-tag">National Winner Certificates</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other perks panel -->
+            <div class="perks-row scroll-animate">
+                <div class="perk-box">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>Participation certificates for all selected candidates.</span>
+                </div>
+                <div class="perk-box">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>Registration Fee payment policy: The fee is ₹400/- per participant. You pay <strong>only after</strong> your project abstract is selected. Initial ideation submission is completely free.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators & Patrons Section -->
+    <section id="coordinators" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">Committee & Coordinators</h2>
+                <p class="section-subtitle">Leadership driving TECHNOVA'26 forward</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Patrons Grid -->
+            <h3 class="subsection-title scroll-animate">Patrons</h3>
+            <div class="patrons-grid scroll-animate">
+                <div class="patron-card">
+                    <span class="role-badge">Chairman</span>
+                    <h4>Shri A. Srinivasan</h4>
+                    <p>Dhanalakshmi Srinivasan Group</p>
+                </div>
+                <div class="patron-card">
+                    <span class="role-badge">Principal</span>
+                    <h4>Dr. D. Shanmugasundaram</h4>
+                    <p>DSEC (Autonomous)</p>
+                </div>
+                <div class="patron-card">
+                    <span class="role-badge">Vice Principal</span>
+                    <h4>Dr. K. Anbarasan</h4>
+                    <p>DSEC (Autonomous)</p>
+                </div>
+                <div class="patron-card">
+                    <span class="role-badge">HOD / IT</span>
+                    <h4>Mr. S. Saravanan</h4>
+                    <p>Department of Information Technology</p>
+                </div>
+            </div>
+
+            <!-- Coordinators Split Grid -->
+            <div class="coordinators-split-grid section-bg">
+                <!-- Staff Coordinators -->
+                <div class="coord-block">
+                    <h3>Staff Coordinators</h3>
+                    <div class="coord-list">
+                        <div class="coord-card">
+                            <div class="avatar-circle">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="coord-details">
+                                <h4>Ms. K. Lalithavani</h4>
+                                <span class="designation">AP / IT</span>
+                            </div>
+                        </div>
+                        <div class="coord-card">
+                            <div class="avatar-circle">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </div>
+                            <div class="coord-details">
+                                <h4>Mrs. S. Abirami</h4>
+                                <span class="designation">AP / IT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Coordinators -->
+                <div class="coord-block">
+                    <h3>Student Coordinators</h3>
+                    <div class="coord-list">
+                        <div class="coord-card">
+                            <div class="avatar-circle">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="coord-details">
+                                <h4>Mathura P</h4>
+                                <a href="tel:+917092200421" class="phone-link">+91 7092200421</a>
+                            </div>
+                        </div>
+                        <div class="coord-card">
+                            <div class="avatar-circle">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div class="coord-details">
+                                <h4>Ragul S</h4>
+                                <a href="tel:+917904979933" class="phone-link">+91 7904979933</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrapper scroll-animate">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions? We've got answers</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="faq-accordion-wrapper scroll-animate">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Who is eligible to participate in TECHNOVA'26?</span>
+                        <span class="faq-toggle"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Undergraduate engineering and technology students (BE/B.Tech) from any recognized institution across India are eligible to form a team and participate.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the team size and composition?</span>
+                        <span class="faq-toggle"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Teams can have a maximum of 4 members. Inter-disciplinary teams from the same college are welcome. It is highly recommended to have a balance of software developers and hardware engineers depending on your project.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is there a registration fee? When do we pay?</span>
+                        <span class="faq-toggle"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, the registration fee is ₹400/- per participant. However, <strong>you do not pay anything during the initial registration</strong>. The fee is payable strictly <strong>ONLY AFTER</strong> your team is selected for the physical 24-hour hackathon round.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are the key selection criteria for the PPT?</span>
+                        <span class="faq-toggle"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Submissions are evaluated on: Relevance to the sustainability theme, Frugality (low-cost design), Practical feasibility, Technical innovation, and Clarity of implementation.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is accommodation provided during the event?</span>
+                        <span class="faq-toggle"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Overnight accommodation and restroom facilities inside the college campus hostels will be provided for all selected outstation participants during the 24-hour event.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <a href="#" class="logo">
+                    <span class="logo-accent">TECH</span>NOVA<span>'26</span>
+                </a>
+                <p>National Level Hackathon organized by the Department of IT. Driving frugal innovations for a sustainable society.</p>
+                <p class="accreditations">DSEC: NAAC 'A' | NBA Accredited Departments | AICTE Approved | Affiliated to Anna University</p>
+            </div>
+            
+            <div class="footer-center">
+                <h4>Event Links</h4>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#theme-section">Theme</a>
+                    <a href="#timeline">Timeline</a>
+                    <a href="#prizes">Prizes</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h4>Venue Address</h4>
+                <p>Dhanalakshmi Srinivasan Engineering College (Autonomous),</p>
+                <p>Thuraiyur Road, Perambalur,</p>
+                <p>Tamil Nadu, India - 621 212.</p>
+                <p>Email: <a href="mailto:it.dept@dsec.ac.in" class="footer-mail">it.dept@dsec.ac.in</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container fb-container">
+                <p>&copy; 2026 Dhanalakshmi Srinivasan Engineering College. All rights reserved. Designed for DSEC TECHNOVA'26.</p>
+                <div class="socials">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m8.4 1.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Entry -->
+    <script src="app.js"></script>
+</body>
+</html>
