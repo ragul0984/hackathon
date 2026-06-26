@@ -485,11 +485,31 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
 }
 
-.college-meta {
+.college-meta1{
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    line-height: 1.5;
+    max-width: 900px;
+    text-align: center;
+}
+.college-meta{
     font-size: 0.85rem;
     color: var(--text-muted);
     letter-spacing: 1px;
     margin-bottom: 40px;
+    line-height: 1.5;
+    max-width: 900px;
+    text-align: center;
+}
+.meta-chunk {
+    display: inline-block;
+}
+.meta-separator {
+    display: inline-block;
+    margin: 0 8px;
+    opacity: 0.5;
 }
 
 .hero-title {
@@ -1993,6 +2013,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
+    .college-meta, .college-meta1 {
+        font-size: 0.75rem !important;
+        letter-spacing: 0.5px;
+        line-height: 1.6;
+        max-width: 95%;
+    }
+    
+    .college-meta1 {
+        margin-bottom: 8px;
+    }
+    
+    .college-meta {
+        margin-bottom: 30px;
+    }
+
+    .meta-separator {
+        display: none;
+    }
+
+    .meta-chunk {
+        display: block;
+        margin-bottom: 4px;
+    }
+
     .section-padding {
         padding: 60px 0;
     }
