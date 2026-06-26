@@ -1288,6 +1288,12 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+.coord-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .coord-details h4 {
     font-size: 1rem;
     font-weight: 600;
