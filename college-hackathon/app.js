@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.vy = (Math.random() - 0.5) * 0.5;
             this.size = Math.random() * 2 + 1;
             this.pulseDir = Math.random() > 0.5 ? 1 : -1;
-            this.color = Math.random() > 0.4 ? '#0ea5e9' : '#6366f1';
+            this.color = Math.random() > 0.4 ? '#3b82f6' : '#facc15';
         }
 
         update() {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);
                     ctx.lineTo(mouse.x, mouse.y);
-                    ctx.strokeStyle = '#0ea5e9';
+                    ctx.strokeStyle = '#3b82f6';
                     ctx.lineWidth = 1;
                     ctx.globalAlpha = alpha;
                     ctx.stroke();
