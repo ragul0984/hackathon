@@ -552,6 +552,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 40px;
     position: relative;
     display: inline-block;
+    text-align: center;
 }
 
 .hero-subtitle::before, .hero-subtitle::after {
