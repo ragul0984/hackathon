@@ -56,6 +56,10 @@ body {
     position: relative;
 }
 
+p {
+    text-align: justify;
+}
+
 /* Custom Scrollbar */
 body::-webkit-scrollbar {
     width: 8px;
@@ -483,6 +487,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 8px;
     max-width: 800px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .college-meta1{
@@ -1039,6 +1044,10 @@ body::-webkit-scrollbar-thumb {
     height: 200px;
 }
 
+.prize-card p {
+    text-align: center;
+}
+
 .trophy-wrapper {
     position: relative;
     display: inline-block;
@@ -1236,6 +1245,7 @@ body::-webkit-scrollbar-thumb {
 .patron-card p {
     font-size: 0.8rem;
     color: var(--text-muted);
+    text-align: center;
 }
 
 .coordinators-split-grid {
@@ -1722,6 +1732,7 @@ body::-webkit-scrollbar-thumb {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .footer-mail {
@@ -1750,6 +1761,7 @@ body::-webkit-scrollbar-thumb {
 .fb-container p {
     font-size: 0.8rem;
     color: var(--text-muted);
+    text-align: center;
 }
 
 .socials {
@@ -2086,6 +2098,10 @@ body::-webkit-scrollbar-thumb {
     
     .socials {
         justify-content: center;
+    }
+
+    .footer-right p {
+        text-align: center;
     }
     
     .patrons-grid {
