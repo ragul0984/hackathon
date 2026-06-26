@@ -2192,3 +2192,75 @@ body::-webkit-scrollbar-thumb {
         font-size: 1rem;
     }
 }
+
+/* --- Institution Section --- */
+.grid-2institution {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.institution-text .lead {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.institution-text p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.institution-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.img-frame {
+    position: relative;
+    border-radius: 16px;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: var(--glow-primary);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+.frame-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    filter: blur(15px);
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.campus-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}
+
+.img-frame:hover .campus-img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+    .grid-2institution {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
