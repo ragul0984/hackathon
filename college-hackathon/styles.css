@@ -781,10 +781,6 @@ body::-webkit-scrollbar-thumb {
     gap: 20px;
 }
 
-@media (max-width: 480px) {
-    .about-highlights-grid { grid-template-columns: 1fr; }
-    .about-key-stats { grid-template-columns: 1fr; }
-}
 
 .highlight-card {
     background: var(--bg-card);
@@ -2072,9 +2068,13 @@ body::-webkit-scrollbar-thumb {
     }
 
     .section-padding {
-        padding: 60px 0;
+        padding: 45px 0;
     }
     
+    .section-title-wrapper {
+        margin-bottom: 25px;
+    }
+
     .section-title {
         font-size: 1.8rem;
     }
@@ -2084,8 +2084,35 @@ body::-webkit-scrollbar-thumb {
     }
     
     #hero {
-        padding-top: calc(var(--header-height) + 30px);
-        padding-bottom: 50px;
+        padding-top: calc(var(--header-height) + 15px);
+        padding-bottom: 35px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.6rem, 8.5vw, 2.8rem) !important;
+        letter-spacing: 2px;
+        white-space: normal;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        letter-spacing: 2px !important;
+        white-space: normal;
+        max-width: 90%;
+    }
+
+    .hero-subtitle::before,
+    .hero-subtitle::after {
+        display: none !important;
+    }
+
+    .about-highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .timeline-content {
+        padding: 20px 16px;
     }
     
     .hero-quick-details {
@@ -2129,6 +2156,7 @@ body::-webkit-scrollbar-thumb {
     .patrons-grid {
         grid-template-columns: 1fr;
         gap: 15px;
+        margin-bottom: 30px;
     }
 }
 
