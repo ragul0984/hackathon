@@ -2062,6 +2062,17 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 30px;
     }
 
+    .oi-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .oi-title-block h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.4;
+    }
+
     .meta-separator {
         display: none;
     }
@@ -2166,9 +2177,13 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 480px) {
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.35rem !important;
     }
     
+    .oi-title-block h3 {
+        font-size: 1.1rem !important;
+    }
+
     .theme-box {
         padding: 16px;
     }
