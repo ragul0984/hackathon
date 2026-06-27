@@ -2264,3 +2264,102 @@ body::-webkit-scrollbar-thumb {
         gap: 30px;
     }
 }
+
+/* --- Brochure Section --- */
+.brochure-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.brochure-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.brochure-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.brochure-frame {
+    position: relative;
+    border-radius: 16px;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: var(--glow-primary);
+    width: 100%;
+    overflow: hidden;
+}
+
+.brochure-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}
+
+.brochure-overlay {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(5, 11, 24, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.brochure-frame:hover .brochure-overlay {
+    opacity: 1;
+}
+
+.brochure-frame:hover .brochure-img {
+    transform: scale(1.005);
+}
+
+.overlay-content {
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.download-icon {
+    color: #facc15;
+    filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.5));
+    transition: var(--transition);
+}
+
+.brochure-frame:hover .download-icon {
+    transform: translateY(-4px);
+}
+
+.overlay-content span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #facc15;
+}
+
+.brochure-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
