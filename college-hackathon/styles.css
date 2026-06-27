@@ -271,11 +271,11 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     font-weight: 900;
     color: var(--text-main);
     text-decoration: none;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     display: flex;
     align-items: center;
 }
@@ -294,17 +294,17 @@ body::-webkit-scrollbar-thumb {
 #navbar {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
 }
 
 .nav-link {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 500;
     color: var(--text-muted);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     transition: var(--transition);
     position: relative;
     padding: 6px 0;
@@ -361,19 +361,21 @@ body::-webkit-scrollbar-thumb {
     #nav-register-btn { display: none; }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
     #navbar {
-        gap: 16px;
+        gap: 10px;
     }
     .nav-link {
-        font-size: 0.78rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.2px;
     }
     .logo {
-        font-size: 1.35rem;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
     }
     #nav-register-btn {
-        padding: 10px 20px;
-        font-size: 0.85rem;
+        padding: 8px 12px;
+        font-size: 0.78rem;
     }
 }
 
