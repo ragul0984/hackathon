@@ -355,10 +355,26 @@ body::-webkit-scrollbar-thumb {
     transition: var(--transition);
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1024px) {
     #navbar { display: none; }
     .mobile-nav-toggle { display: flex; }
     #nav-register-btn { display: none; }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #navbar {
+        gap: 16px;
+    }
+    .nav-link {
+        font-size: 0.78rem;
+    }
+    .logo {
+        font-size: 1.35rem;
+    }
+    #nav-register-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
 }
 
 /* Mobile Navigation Drawer */
