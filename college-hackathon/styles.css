@@ -709,15 +709,37 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+.hero-details-box {
+    background: rgba(10, 25, 50, 0.35);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 850px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .hero-quick-details {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 30px;
     width: 100%;
-    max-width: 800px;
+}
+
+.fee-disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+    margin-top: 0;
+    text-align: center;
 }
 
 .qd-item {
@@ -2381,17 +2403,4 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-/* --- Venue Styles --- */
-.venue-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
-}
 
-@media (max-width: 768px) {
-    .venue-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-}
